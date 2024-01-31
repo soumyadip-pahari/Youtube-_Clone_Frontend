@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	.sign_in{
+		height: 550px;
+		width:450px;
+		margin:auto;
+		margin-top: 90px;
+		/*background-color: blue;*/
+	    border:2px solid black;
+	    border-radius: 12px;
+	}
+	.sign_in h2
+	{
+		text-align: center;
+	}
+	.sign_in h3
+	{
+		text-align: center;
+		font-weight: 100;
+	}
+	.sign_in img{
+		margin: auto;
+		display: block;
+		margin-top: 20px;
+	}
+	.sign_in input{
+		height:60px;
+		width:400px;
+		border: 2px solid black;
+		border-radius: 4px; 
+		margin-left:20px;
+	}
+	</style>
+</head>
+<body>
+	<div class="sign_in">
+		<img src="IMG/Google_2015_logo.svg.png" height="28px" width="80px">
+		<h2>Sign in</h2>
+		<h3> to continue to YouTube</h3>
+		<table>
+			<form onsubmit="return Next()">
+			<tr>
+				<td>
+					 <input type="text" name="" placeholder="Email or phone number" value="" id="email"><span id="msg" style="color: red; font-size: 14px;margin-left: 20px;"> </span>
+				</td>
+			</tr>
+			<tr>
+				<td><span style="color:blue; display: block; margin-left: 20px; ">Forget email?</span>
+					<br><br>
+					</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="text" name="" placeholder="Password" value=""id="pwd"><span id="message" style="color: red; font-size:14px; margin-left: 20px;"> </span>
+				</td>
+			</tr>
+			<tr>
+				<td><span style="color:blue;  margin-left: 20px; ">Forget email?</span>
+					<br><br>
+					</td>
+			</tr>
+			<tr>
+				<td><span style=" margin-left: 20px; ">Not your computer? Use guest mode to sign in privately.</span>
+					<br><br>
+					</td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="" value="Submit" style="width:80px;height:40px; background-color: blue; color: white; cursor: pointer; border:none; margin-left: 340px;">
+					
+					</td>
+			</tr>
+		</form>
+	</table>
+	<script type="text/javascript">
+		function Next()
+		{
+		var email=document.getElementById('email').value;
+	    var pwd=document.getElementById('pwd').value;
+     	if(email=="")
+        {
+	         document.getElementById("msg").innerHTML="Please enter Email or phone number";
+	         return false;
+        }
+        if(pwd=="")
+        {
+	         document.getElementById("message").innerHTML="Please enter Password";
+	         return false;
+        }
+    }
+	</script>
+	</div>
+
+</body>
+</html>
